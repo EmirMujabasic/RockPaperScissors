@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let playerSelection=prompt("Schere, Stein, Papier?").toUpperCase // I use the prompt to ask for input and the toUpper Method for case insensitivity
+      let selections=["SCHERE", "STEIN", "PAPIER"]
+      let computerSelection= selections[Math.floor(Math.random()*selections.length)]; // computer randomly chooses a string  from the selections variable
+    function playGame(playerSelection,computerSelection) {
+      
+      if (playerSelection==="SCHERE"&&computerSelection==="STEIN"
+      ||playerSelection==="PAPIER"&&computerSelection==="SCHERE"
+      ||playerSelection==="STEIN"&&computerSelection==="PAPIER") { // here are the loss conditions
+        alert("Verloren!")
+      } else if(playerSelection===computerSelection){ 
+        alert("Unentschieden!") /* this is the message for a tie*/
+      } else{
+        alert("Gewonnen") // if non of the above is true, you win, so this is the win message
+      }
+    }
+
+    
+  </script>
+</body>
+</html>
